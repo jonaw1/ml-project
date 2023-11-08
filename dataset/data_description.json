@@ -1,0 +1,657 @@
+{
+    "Id": {
+        "Beschreibung": "Index"
+    },
+    "Wohngebiet": {
+        "Beschreibung": "Klassifizierung des Wohngebiets des Verkaufsobjekts",
+        "Werte": {
+            "L": "Landwirtschaft",
+            "G": "Gewerblich",
+            "D": "Dorf",
+            "I": "Industrie",
+            "WH": "Wohngebiet mit hoher Dichte",
+            "WN": "Wohngebiet mit niedriger Dichte",
+            "WP": "Wohnpark mit hoher Dichte",
+            "WM": "Wohngebiet mit mittlerer Dichte"
+        }
+    },
+    "Nachbarschaft": {
+        "Beschreibung": "Lage innerhalb der Stadtgrenzen von Frankfurt",
+        "Werte": {
+            "Oberrad": "Oberrad",
+            "Berkers": "Berkersheim",
+            "Bockenh": "Bockenheim",
+            "Bornhei": "Bornheim",
+            "Dornbus": "Dornbusch",
+            "Hochsch": "Hochschule",
+            "Eckenhe": "Eckenheim",
+            "Gallus": "Gallus",
+            "Ginnhei": "Ginnheim",
+            "Eisenba": "Eisenbahn",
+            "Wiesend": "Wiesendorf",
+            "Hausen": "Hausen",
+            "Höchst": "Höchst",
+            "Kalbach": "Kalbach",
+            "Flughaf": "Flughafen",
+            "Nied": "Nied",
+            "Nordend": "Nordend",
+            "Altstad": "Altstadt",
+            "Riederw": "Riederwald",
+            "Sachsen": "Sachsenhausen",
+            "Westend": "Westend",
+            "Schwanh": "Schwanheim",
+            "Sindlin": "Sindlingen",
+            "Sossenh": "Sossenheim",
+            "Zeilshe": "Zeilsheim"
+        }
+    },
+    "Bedingung1": {
+        "Beschreibung": "Nähe zu verschiedenen Bedingungen",
+        "Werte": {
+            "Haup": "Angrenzend an die Hauptstraße",
+            "Zubr": "Angrenzend an Zubringerstraße",
+            "Norm": "Normal",
+            "EbNU": "Im Umkreis von 200m um die Nord-Süd-Eisenbahn",
+            "EbNA": "Angrenzend an die Nord-Süd-Eisenbahn",
+            "PosN": "Nahe an positiven Außenanlagen - Park, Grünanlagen usw.",
+            "PosA": "Angrenzend an positive Außenanlagen",
+            "EbOU": "Im Umkreis von 200m um die Ost-West-Eisenbahn",
+            "EbOA": "Angrenzend an die Ost-West-Eisenbahn"
+        }
+    },
+    "Bedingung2": {
+        "Beschreibung": "Nähe zu verschiedenen Bedingungen (wenn mehr als eine vorhanden ist)",
+        "Werte": {
+            "Haup": "Angrenzend an die Hauptstraße",
+            "Zubr": "Angrenzend an Zubringerstraße",
+            "Norm": "Normal",
+            "EbNU": "Im Umkreis von 200m um die Nord-Süd-Eisenbahn",
+            "EbNA": "Angrenzend an die Nord-Süd-Eisenbahn",
+            "PosN": "Nahe an positiven Außenanlagen - Park, Grünanlagen usw.",
+            "PosA": "Angrenzend an positive Außenanlagen",
+            "EbOU": "Im Umkreis von 200m um die Ost-West-Eisenbahn",
+            "EbOA": "Angrenzend an die Ost-West-Eisenbahn"
+        }
+    },
+    "Wohnungsklasse": {
+        "Beschreibung": "Klassifizierung des Wohnungstyps des Verkaufsobjekts",
+        "Werte": {
+            "20": "1-stöckig, 1956 & neuer, alle Stile",
+            "30": "1-stöckig, 1955 & älter",
+            "40": "1-stöckig mit ausgebautem Dachboden, alle Altersgruppen",
+            "45": "1-1/2-stöckig, unbeendet, alle Altersgruppen",
+            "50": "1-1/2-stöckig, beendet, alle Altersgruppen",
+            "60": "2-stöckig, 1956 & neuer",
+            "70": "2-stöckig, 1955 & älter",
+            "75": "2-1/2-stöckig, alle Altersgruppen",
+            "80": "geteilt oder mehrstöckig",
+            "85": "geteiltes Foyer",
+            "90": "Doppelhaus, alle Stile und Altersgruppen",
+            "120": "1-stöckig, Wohngebiet, 1956 & neuer",
+            "150": "1-1/2-stöckig, Wohngebiet, alle Altersgruppen",
+            "160": "2-stöckig, Wohngebiet, 1956 & neuer",
+            "180": "Wohngebiet, mehrstöckig mit geteiltem Stockwerk/Foyer",
+            "190": "2-Familien-Umbau, alle Stile und Altersgruppen"
+        }
+    },
+    "Gebauedetyp": {
+        "Beschreibung": "Bauart der Wohnung",
+        "Werte": {
+            "1Fam": "Einfamilienhaus Freistehend",
+            "2FamU": "Zwei-Familien-Umbau, ursprünglich als Einfamilienhaus gebaut",
+            "DopH": "Doppelhaus",
+            "StHAb": "Stadthaus Abschlusseinheit",
+            "StHIn": "Stadthaus Inneneinheit"
+        }
+    },
+    "Wohnungsstil": {
+        "Beschreibung": "Stil der Wohnung",
+        "Werte": {
+            "1Sto": "Ein Stockwerk",
+            "1.5V": "Eineinhalb Stockwerke: 2. Etage vollendet",
+            "1.5U": "Eineinhalb Stockwerke: 2. Etage unvollendet",
+            "2Sto": "Zwei Stockwerke",
+            "2.5V": "Zweieinhalb Stockwerke: 2. Etage vollendet",
+            "2.5U": "Zweieinhalb Stockwerke: 2. Etage unvollendet",
+            "GFoy": "Geteiltes Foyer",
+            "GSto": "Geteiltes Stockwerk"
+        }
+    },
+    "Baujahr": {
+        "Beschreibung": "Ursprüngliches Baudatum"
+    },
+    "Umbaujahr": {
+        "Beschreibung": "Umbaudatum (gleich dem Baudatum, wenn keine Umbauten oder Ergänzungen vorgenommen wurden)"
+    },
+    "Hausqualitaet": {
+        "Beschreibung": "Bewertung von Material und Ausführung des Hauses insgesamt",
+        "Werte": {
+            "10": "Überragend",
+            "9": "Ausgezeichnet",
+            "8": "Sehr Gut",
+            "7": "Gut",
+            "6": "Überdurchschnittlich",
+            "5": "Durchschnittlich",
+            "4": "Unterdurchschnittlich",
+            "3": "In Ordnung",
+            "2": "Schlecht",
+            "1": "Sehr schlecht"
+        }
+    },
+    "Hauszustand": {
+        "Beschreibung": "Bewertung des Gesamtzustands des Hauses",
+        "Werte": {
+            "10": "Überragend",
+            "9": "Ausgezeichnet",
+            "8": "Sehr Gut",
+            "7": "Gut",
+            "6": "Überdurchschnittlich",
+            "5": "Durchschnittlich",
+            "4": "Unterdurchschnittlich",
+            "3": "In Ordnung",
+            "2": "Schlecht",
+            "1": "Sehr schlecht"
+        }
+    },
+    "Versorgung": {
+        "Beschreibung": "Verfügbare Versorgungseinrichtungen",
+        "Werte": {
+            "EGWA": "Alle öffentlichen Versorgungseinrichtungen (Elektrizität, Gas, Wasser und Abwasser)",
+            "EGW": "Elektrizität, Gas und Wasser (Sickergrube)",
+            "EG": "Nur Elektrizität und Gas",
+            "E": "Nur Elektrizität"
+        }
+    },
+    "Grundstuecksgroesse": {
+        "Beschreibung": "Grundstücksgröße in Quadratmetern"
+    },
+    "Grundstuecksform": {
+        "Beschreibung": "Generelle Gestalt des Grundstücks",
+        "Werte": {
+            "Reg": "Regelmäßig",
+            "UR1": "Leicht unregelmäßig",
+            "UR2": "Mäßig unregelmäßig",
+            "IR3": "Unregelmäßig"
+        }
+    },
+    "Gelaendekontur": {
+        "Beschreibung": "Ebenheit des Grundstücks",
+        "Werte": {
+            "Ebn": "Beinahe flach/eben",
+            "Erh": "Erhöhung - Schneller und deutlicher Anstieg von der Straße zum Gebäude",
+            "Hng": "Hang - Deutliches Gefälle von einer Seite zur anderen",
+            "Snk": "Senke"
+        }
+    },
+    "Gelaendeneigung": {
+        "Beschreibung": "Neigung des Grundstücks",
+        "Werte": {
+            "San": "Sanftes Gefälle",
+            "Mit": "Mittleres Gefälle",
+            "Sta": "Starkes Gefälle"
+        }
+    },
+    "Grundstueckanordnung": {
+        "Beschreibung": "Anordnung des Grundstücks",
+        "Werte": {
+            "Inn": "Innenliegendes Grundstück",
+            "Eck": "Eckgrundstück",
+            "SG": "Sackgasse",
+            "2St": "Straße auf 2 Seiten des Grundstücks",
+            "3St": "Straße auf 3 Seiten des Grundstücks"
+        }
+    },
+    "Strassenlaenge": {
+        "Beschreibung": "Länge der mit dem Grundstück verbundenen Straße"
+    },
+    "Strassentyp": {
+        "Beschreibung": "Art des Straßenzugangs zum Grundstück",
+        "Werte": {
+            "Scho": "Geschottert",
+            "Pfla": "Gepflastert"
+        }
+    },
+    "Zufahrtsweg": {
+        "Beschreibung": "Art des Zufahrtswegs zum Grundstück",
+        "Werte": {
+            "Scho": "Geschottert",
+            "Pfla": "Gepflastert",
+            "Kein": "Kein Zufahrtsweg"
+        }
+    },
+    "Fundament": {
+        "Beschreibung": "Art des Fundaments",
+        "Werte": {
+            "ZiegFli": "Ziegel und Fliesen",
+            "BetonSte": "Betonstein",
+            "BetonGeg": "Gegossener Beton",
+            "Platten": "Platten",
+            "Stein": "Stein",
+            "Holz": "Holz"
+        }
+    },
+    "Mauerwerktyp": {
+        "Beschreibung": "Art des Mauerwerksfurniers",
+        "Werte": {
+            "ZiegAlg": "Ziegel allgemein",
+            "ZiegGla": "Ziegel glatt",
+            "BetonSt": "Betonstein",
+            "Kein": "Kein",
+            "Stein": "Stein"
+        }
+    },
+    "Mauerwerkflaeche": {
+        "Beschreibung": "Fläche des Mauerwerksfurniers in Quadratmetern"
+    },
+    "Verkleidung1": {
+        "Beschreibung": "Außenverkleidung am Haus",
+        "Werte": {
+            "AsbeSch": "Asbest-Schindeln",
+            "AsphSch": "Asphalt-Schindeln",
+            "ZiegAlg": "Ziegel allgemein",
+            "ZiegMau": "Ziegel glatt",
+            "BetonSt": "Betonstein",
+            "Zement": "Zementplatte",
+            "Hartfas": "Hartfaserplatte",
+            "StuckIm": "Stuck-Imitation",
+            "Metall": "Metallverkleidung",
+            "Andere": "Andere",
+            "Sperrho": "Sperrholz",
+            "Vorguss": "Vorgussteile",
+            "Stein": "Stein",
+            "Stuck": "Stuck",
+            "Vinyl": "Vinyl-Verkleidung",
+            "Holz": "Holzverkleidung",
+            "HolzSch": "Holzschindeln"
+        }
+    },
+    "Verkleidung2": {
+        "Beschreibung": "Außenverkleidung am Haus (wenn mehr als ein Material)",
+        "Werte": {
+            "AsbeSch": "Asbest-Schindeln",
+            "AsphSch": "Asphalt-Schindeln",
+            "ZiegAlg": "Ziegel allgemein",
+            "ZiegGla": "Ziegel glatt",
+            "BetonSt": "Betonstein",
+            "Zement": "Zementplatte",
+            "Hartfas": "Hartfaserplatte",
+            "StuckIm": "Stuck-Imitation",
+            "Metall": "Metallverkleidung",
+            "Andere": "Andere",
+            "Sperrho": "Sperrholz",
+            "Vorguss": "Vorgussteile",
+            "Stein": "Stein",
+            "Stuck": "Stuck",
+            "Vinyl": "Vinyl-Verkleidung",
+            "Holz": "Holzverkleidung",
+            "HolzSch": "Holzschindeln"
+        }
+    },
+    "Dachtyp": {
+        "Beschreibung": "Art des Daches",
+        "Werte": {
+            "Flach": "Flach",
+            "Giebel": "Giebel",
+            "GiebelS": "Giebel (Scheune)",
+            "Walm": "Walm",
+            "Mansarde": "Mansarde",
+            "Pult": "Pult"
+        }
+    },
+    "Dachmeterial": {
+        "Beschreibung": "Material des Daches",
+        "Werte": {
+            "TonFli": "Ton oder Fliesen",
+            "VerbSch": "Standard (Verbund-)Schindel",
+            "Membran": "Membran",
+            "Metall": "Metall",
+            "Roll": "Roll",
+            "KiesTeer": "Kies- und Teer",
+            "HolzScht": "Holzschütteln",
+            "HolzSchd": "Holzschindeln"
+        }
+    },
+    "Aussenmaterialqualitaet": {
+        "Beschreibung": "Bewertung der Materialqualität auf der Außenseite",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "Sc": "Schlecht"
+        }
+    },
+    "Aussenmaterialzustand": {
+        "Beschreibung": "Bewertet den gegenwärtigen Zustand des Materials auf der Außenseite",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "Sc": "Schlecht"
+        }
+    },
+    "Kellerhoehe": {
+        "Beschreibung": "Bewertet die Höhe des Kellers",
+        "Werte": {
+            "Ag": "Ausgezeichnet (>250 cm)",
+            "Gu": "Gut (225-250 cm)",
+            "Ty": "Typisch (200-225 cm)",
+            "Ar": "Ausreichend (180-200 cm)",
+            "Sc": "Schlecht (<180 cm)",
+            "NA": "Kein Keller"
+        }
+    },
+    "Kellerzustand": {
+        "Beschreibung": "Bewertung des allgemeinen Zustands des Kellers",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Ty": "Typisch - leichte Feuchtigkeit erlaubt",
+            "Ar": "Ausreichend - Feuchtigkeit oder einige Risse oder Absetzungen",
+            "Sc": "Schlecht - Starke Rissbildung, Absetzung oder Nässe",
+            "NA": "Kein Keller"
+        }
+    },
+    "Kellerbelichtung": {
+        "Beschreibung": "Bezieht sich auf Wände auf Ausgangs- oder Gartenebene",
+        "Werte": {
+            "Gu": "Gute Belichtung",
+            "Du": "Durchschnittliche Belichtung (geteilte Stockwerke oder Foyers erzielen in der Regel eine durchschnittliche oder höhere Punktzahl)",
+            "Mn": "Minimale Belichtung",
+            "Ke": "Keine Belichtung",
+            "NA": "Kein Keller"
+        }
+    },
+    "Kellerbereich1": {
+        "Beschreibung": "Bewertung des ausgebauten Kellerbereichs",
+        "Werte": {
+            "GWR": "Guter Wohnraum",
+            "DWR": "Durchschnittlicher Wohnraum",
+            "UWR": "Unterdurchschnittlicher Wohnraum",
+            "DAR": "Durchschnittlicher Aufenthaltsraum",
+            "SQ": "Schlechte Qualität",
+            "NAu": "Nicht ausgebaut",
+            "NA": "Kein Keller"
+        }
+    },
+    "Kellerbereichgroesse1": {
+        "Beschreibung": "Bereich 1 ausgebaute Größe in Quadratmetern"
+    },
+    "Kellerbereich2": {
+        "Beschreibung": "Bewertung des ausgebauten Kellerbereichs (falls mehrere Typen)",
+        "Werte": {
+            "GWR": "Guter Wohnraum",
+            "DWR": "Durchschnittlicher Wohnraum",
+            "UWR": "Unterdurchschnittlicher Wohnraum",
+            "DAR": "Durchschnittlicher Aufenthaltsraum",
+            "SQ": "Schlechte Qualität",
+            "NAu": "Nicht ausgebaut",
+            "NA": "Kein Keller"
+        }
+    },
+    "Kellerbereichgroesse2": {
+        "Beschreibung": "Bereich 2 ausgebaute Größe in Quadratmetern"
+    },
+    "KellerbereichgroesseNAu": {
+        "Beschreibung": "Größe des nicht ausgebauten Kellerbereichs in Quadratmetern"
+    },
+    "KellerbereichgroesseGes": {
+        "Beschreibung": "Gesamtgröße des Kellerbereichs in Quadratmetern"
+    },
+    "KellerVollbadezimmer": {
+        "Beschreibung": "Vollständige Badezimmer im Kellergeschoss"
+    },
+    "KellerHalbbadezimmer": {
+        "Beschreibung": "Halbe Badezimmer im Kellergeschoss"
+    },
+    "OberirdischeWohnflaeche": {
+        "Beschreibung": "Oberirdische Wohnfläche in Quadratmetern"
+    },
+    "1Stockflaeche": {
+        "Beschreibung": "Größe des ersten Stocks in Quadratmetern"
+    },
+    "2Stockflaeche": {
+        "Beschreibung": "Größe des zweiten Stocks in Quadratmetern"
+    },
+    "GeringequalitaetFlaeche": {
+        "Beschreibung": "Größe ausgebauter Bereich in geringer Qualität in Quadratmetern (alle Stockwerke)"
+    },
+    "OberirdischeRaueme": {
+        "Beschreibung": "Gesamtzahl der oberirdischen Räume (ohne Badezimmer)"
+    },
+    "Funktionalitaet": {
+        "Beschreibung": "Wohnfunktionalität (Annahme typisch, sofern keine Abzüge gerechtfertigt sind)",
+        "Werte": {
+            "Typ": "Typische Funktionalität",
+            "Ger1": "Geringfügige Abzüge 1",
+            "Ger2": "Geringfügige Abzüge 2",
+            "Mit": "Mittlere Abzüge",
+            "Gro1": "Große Abzüge 1",
+            "Gro2": "Große Abzüge 2",
+            "Sch": "Schwere Beschädigungen",
+            "Ber": "Nur Bergung"
+        }
+    },
+    "OberirdischeVollbadezimmer": {
+        "Beschreibung": "Oberirdische vollständige Badezimmer"
+    },
+    "OberirdischeHalbbadezimmer": {
+        "Beschreibung": "Oberirdische halbe Badezimmer"
+    },
+    "Schlafzimmer": {
+        "Beschreibung": "Oberirdische Schlafzimmer (umfasst NICHT Schlafzimmer im Keller)"
+    },
+    "Kuechen": {
+        "Beschreibung": "Oberirdische Küchen"
+    },
+    "KuechenQualitaet": {
+        "Beschreibung": "Qualität der Küchen",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "Sc": "Schlecht"
+        }
+    },
+    "Kamine": {
+        "Beschreibung": "Anzahl der Kamine"
+    },
+    "Kaminqualitaet": {
+        "Beschreibung": "Qualität der Kamine",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "Sc": "Schlecht",
+            "NA": "Keine Kamine"
+        }
+    },
+    "Heizung": {
+        "Beschreibung": "Art der Heizung",
+        "Werte": {
+            "BodOf": "Fußbodenofen",
+            "GasWO": "Gasbefeuerter Warmluftofen",
+            "GasWD": "Gasbetriebene Warmwasser- oder Dampfheizung",
+            "GravOf": "Gravitationsofen",
+            "NGasWD": "Nicht Gasbetriebene Warmwasser- oder Dampfheizung",
+            "WandOf": "Wandofen"
+        }
+    },
+    "Heizungsqualitaet": {
+        "Beschreibung": "Heizungsqualität und -zustand",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "Sc": "Schlecht"
+        }
+    },
+    "Klimalanlage": {
+        "Beschreibung": "Zentrale Klimaanlage",
+        "Werte": {
+            "N": "Nein",
+            "J": "Ja"
+        }
+    },
+    "Elektrik": {
+        "Beschreibung": "Elektrische Anlage",
+        "Werte": {
+            "SLSRo": "Standard-Leistungsschalter & Romex-Verkabelung",
+            "SichDu": "Sicherungskasten mit über 60 AMP und vollständige Romex-Verkabelung (Durchschnitt)",
+            "SichAr": "60 AMP-Sicherungskasten und überwiegend Romex-Verkabelung (Ausreichend)",
+            "SichSc": "60-AMP-Sicherungskasten und meist Knopf- und Röhrenverkabelung (schlecht)",
+            "Mix": "Gemischt"
+        }
+    },
+    "Holzdeckflaeche": {
+        "Beschreibung": "Fläche des Holzdecks in Quadratmetern"
+    },
+    "OffeneVerandaflaeche": {
+        "Beschreibung": "Offener Verandabereich in Quadratmetern"
+    },
+    "GeschlosseneVerandaflaeche": {
+        "Beschreibung": "Geschlossener Verandabereich in Quadratmetern"
+    },
+    "3JahreszeitenVerandaflaeche": {
+        "Beschreibung": "Drei-Jahreszeiten-Verandabereich in Quadratmetern"
+    },
+    "AbgeschirmteVerandaflaeche": {
+        "Beschreibung": "Abgeschirmter Verandabereich in Quadratmetern"
+    },
+    "Poolflaeche": {
+        "Beschreibung": "Poolbereich in Quadratmetern"
+    },
+    "Poolqualitaet": {
+        "Beschreibung": "Qualität des Pools",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "NA": "Kein Pool"
+        }
+    },
+    "Zaunqualitaet": {
+        "Beschreibung": "Qualität des Zauns",
+        "Werte": {
+            "GuPrv": "Guter Schutz der Privatsphäre",
+            "MnPrv": "Minimaler Schutz der Privatsphäre",
+            "GuHol": "Gutes Holz",
+            "MnHol": "Minimales Holz/Draht",
+            "NA": "Kein Zaun"
+        }
+    },
+    "Garagentyp": {
+        "Beschreibung": "Standort der Garage",
+        "Werte": {
+            "2Typen": "Mehr als ein Garagentyp",
+            "Verbund": "Mit dem Haus verbunden",
+            "Tiefgar": "Tiefgarage",
+            "Eingeb": "Eingebaut (Garage als Teil des Hauses - normalerweise mit Raum über der Garage)",
+            "CarPort": "Car Port",
+            "Abgetr": "Vom Haus abgetrennt",
+            "NA": "Keine Garage"
+        }
+    },
+    "Garagenbaujahr": {
+        "Beschreibung": "Jahr, in dem die Garage gebaut wurde"
+    },
+    "Garageninnenausbau": {
+        "Beschreibung": "Innenausbau der Garage",
+        "Werte": {
+            "Aus": "Ausgebaut",
+            "GAu": "Grob ausgebaut",
+            "NAu": "Nicht ausgebaut",
+            "NA": "No Garage"
+        }
+    },
+    "Garagenautos": {
+        "Beschreibung": "Größe der Garage in Pkw-Kapazität"
+    },
+    "Garagenflaeche": {
+        "Beschreibung": "Größe der Garage in Quadratmetern"
+    },
+    "Garagenqualitaet": {
+        "Beschreibung": "Qualität der Garage",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "Sc": "Schlecht",
+            "NA": "Keine Garage"
+        }
+    },
+    "Garagenzustand": {
+        "Beschreibung": "Zustand der Garage",
+        "Werte": {
+            "Ag": "Ausgezeichnet",
+            "Gu": "Gut",
+            "Du": "Durchschnittlich/Typisch",
+            "Ar": "Ausreichend",
+            "Sc": "Schlecht",
+            "NA": "Keine Garage"
+        }
+    },
+    "EinfahrtGepflastert": {
+        "Beschreibung": "Gepflasterte Einfahrt",
+        "Werte": {
+            "J": "Gepflastert",
+            "P": "Teilweise gepflastert",
+            "N": "Erde/Kies"
+        }
+    },
+    "Sondermerkmal": {
+        "Beschreibung": "Besonderes Merkmal, das in anderen Kategorien nicht abgedeckt wird",
+        "Werte": {
+            "Fahr": "Fahrstuhl",
+            "2Gar": "2. Garage (falls nicht im Abschnitt Garage beschrieben)",
+            "And": "Andere",
+            "Schu": "Schuppen (über 100 m2)",
+            "Tenn": "Tennisplatz",
+            "NA": "Keine"
+        }
+    },
+    "SondermerkmalWert": {
+        "Beschreibung": "Geldwert des besonderen Merkmals"
+    },
+    "Verkaufsmonat": {
+        "Beschreibung": "Verkaufsmonat (MM)"
+    },
+    "Verkaufsjahr": {
+        "Beschreibung": "Verkaufsjahr (JJJJ)"
+    },
+    "Verkaufstyp": {
+        "Beschreibung": "Art des Verkaufs",
+        "Werte": {
+            "GarK": "Garantievertrag - Konventionell",
+            "GarB": "Garantievertrag - Bargeld",
+            "GarD": "Warranty Deed - VA-Darlehen",
+            "Neu": "Haus gerade gebaut und verkauft",
+            "GeBU": "Gerichtsbeamter Urkunde/Staat",
+            "Ver": "Vertrag mit 15% Anzahlung zu regulären Bedingungen",
+            "VerAZ": "Vertrag mit niedriger Anzahlung und niedrigen Zinsen",
+            "VerZ": "Vertrag mit niedrigen Zinsen",
+            "VerA": "Vertrag mit niedriger Anzahlung",
+            "And": "Andere"
+        }
+    },
+    "Verkaufsbedingung": {
+        "Beschreibung": "Bedingung für den Verkauf",
+        "Werte": {
+            "Normal": "Normaler Verkauf",
+            "Abnormal": "Abnormaler Verkauf - Handel, Abschottung, Leerverkauf",
+            "AngrLand": "Erwerb von angrenzendem Land",
+            "Zuweis": "Zuweisung - zwei verbundene Grundstücke mit getrennten Urkunden, typischerweise eine Eigentumswohnung mit einer Garageneinheit",
+            "Familie": "Verkauf zwischen Familienmitgliedern",
+            "Unfertig": "Das Haus war bei der letzten Bewertung nicht fertig gestellt (in Verbindung mit neuen Häusern)"
+        }
+    },
+    "Verkaufspreis": {
+        "Beschreibung": "Bezahlter Preis (Zielvariable)"
+    }
+}
