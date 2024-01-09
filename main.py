@@ -27,6 +27,6 @@ def predict():
   create_predictions(model)
 
 if __name__ == '__main__':
-  preprocess()
-  train_model()
+  # preprocess()
+  # train_model()
   predict()
