@@ -12,3 +12,6 @@ Contributers: @jonaw1, @Kaesekuchen5, @VenthanV
 ## Nice to know
 
 - As long as there are results for a file in `predictions/`, the model will not re-predict, even if there were changes made to the input file
+
+## Possible improvements
+- Most impactful improvements could probably be achieved through feature engineering and/or selecting a different regressor model, because random forests don't work very well with one-hot encoding
