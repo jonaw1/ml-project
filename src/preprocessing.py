@@ -1,5 +1,10 @@
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+PREPROCESSED_FILE_PATH = os.environ.get('PREPROCESSED_DATA_PATH').replace('/', os.path.sep)
+
 
 def load_data(file_path):
     data = pd.read_csv(file_path)
@@ -7,10 +12,10 @@ def load_data(file_path):
     return data
 
 def save_data(data):
-    data.to_csv('data/preprocessed.csv', index=False)
-    print('Saved preprocessed data to data/preprocessed.csv')
+    data.to_csv(PREPROCESSED_FILE_PATH, index=False)
+    print(f'Saved preprocessed data to {PREPROCESSED_FILE_PATH}')
 
-def handle_missing_data(data):
+def handle_missing_data(data, silent=False):
     none_categories = [
         'Zufahrtsweg', 'Kaminqualitaet', 'Zaunqualitaet', 'Poolqualitaet', 
         'Sondermerkmal', 'Garagenzustand', 
@@ -25,8 +30,8 @@ def handle_missing_data(data):
 
     # Special cases
     data['Mauerwerktyp'] = data['Mauerwerktyp'].fillna('Kein')
-
     data = data.drop(['Garagenbaujahr'], axis=1)
+    data = data.drop(['Id'], axis=1)
 
     majority_categories = [
         'Wohngebiet', 'Funktionalitaet', 'Versorgung', 'KuechenQualitaet',
@@ -42,14 +47,15 @@ def handle_missing_data(data):
     ]
     data[zero_categories] = data[zero_categories].fillna(0)
 
-    print(
-        'Amount of missing values after handling:', 
-        data.isnull().sum().sum(),
-        '✅︎' if data.isnull().sum().sum() == 0 else '❌'
-    )
+    if not silent:
+        print(
+            'Amount of missing values after handling:', 
+            data.isnull().sum().sum(),
+            '✅︎' if data.isnull().sum().sum() == 0 else '❌'
+        )
     return data
 
-def encode_categories(data): # One-hot encoding and label encoding
+def encode_categories(data, silent=False): # One-hot encoding and label encoding
     one_hot_columns = [
         'Wohngebiet', 'Nachbarschaft', 'Bedingung1', 'Bedingung2',
         'Gebauedetyp', 'Wohnungsstil', 'Gelaendekontur', 'Grundstueckanordnung', 
@@ -105,15 +111,17 @@ def encode_categories(data): # One-hot encoding and label encoding
     bool_map = {'J': True, 'N': False}
     data['Klimalanlage'] = data['Klimalanlage'].map(bool_map)
   
-    print('Amount of missing values after encoding:', data.isnull().sum().sum(), '✅︎' if data.isnull().sum().sum() == 0 else '❌')
-    unique_cols = set([str(data[col].dtype) for col in data.columns])
-    valid_cols = {'int64', 'bool', 'float64'}
-    incorrect_cols = any(col not in valid_cols for col in unique_cols)
-    print('Unique column types after encoding:', ', '.join(unique_cols), '✅︎' if not incorrect_cols else '❌')
+    if not silent:
+        print('Amount of missing values after encoding:', data.isnull().sum().sum(), '✅︎' if data.isnull().sum().sum() == 0 else '❌')
+        unique_cols = set([str(data[col].dtype) for col in data.columns])
+        valid_cols = {'int64', 'bool', 'float64'}
+        incorrect_cols = any(col not in valid_cols for col in unique_cols)
+        print('Unique column types after encoding:', ', '.join(unique_cols), '✅︎' if not incorrect_cols else '❌')
     return data
 
 def preprocess_data(data):
     print('Start preprocessing the data...')
     data = handle_missing_data(data)
     data = encode_categories(data)
+    data.sort_index(axis=1, inplace=True)
     return data
